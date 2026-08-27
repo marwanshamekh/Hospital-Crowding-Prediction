@@ -1,0 +1,154 @@
+{
+    "model_type": "DecisionTreeClassifier",
+    "algorithm": "Decision Tree (CART)",
+    "random_state": 42,
+    "test_accuracy": 0.9917,
+    "test_f1_weighted": 0.9917,
+    "cv_5fold_f1_mean": 0.993,
+    "cv_5fold_f1_std": 0.0002,
+    "target_mapping": {
+        "Low": 0,
+        "Medium": 1,
+        "High": 2
+    },
+    "reverse_target_mapping": {
+        "0": "Low",
+        "1": "Medium",
+        "2": "High"
+    },
+    "classes": [
+        "Low",
+        "Medium",
+        "High"
+    ],
+    "feature_names": [
+        "Hour",
+        "Emergency_Cases",
+        "Patient_Arrivals",
+        "Queue_Length",
+        "Available_Doctors",
+        "Available_Nurses",
+        "Hospital_Capacity",
+        "Occupied_Beds",
+        "Discharge_Count",
+        "Month",
+        "DayOfWeek",
+        "Bed_Occupancy_Rate",
+        "Total_Staff",
+        "Staff_to_Patient_Ratio",
+        "Department_Internal Medicine",
+        "Department_Outpatient",
+        "Department_Pediatrics",
+        "Department_Surgery",
+        "Patient_Type_Routine",
+        "Patient_Type_Urgent"
+    ],
+    "feature_importances": {
+        "Hour": 0.00017041200879633684,
+        "Emergency_Cases": 0.0003343962584718668,
+        "Patient_Arrivals": 0.0023204946132989305,
+        "Queue_Length": 0.6782248434635263,
+        "Available_Doctors": 0.06525784534700424,
+        "Available_Nurses": 0.0004275283256123971,
+        "Hospital_Capacity": 0.0,
+        "Occupied_Beds": 0.0009580996449699095,
+        "Discharge_Count": 0.0005839485158414164,
+        "Month": 0.0005369106473265347,
+        "DayOfWeek": 0.00020484081554242902,
+        "Bed_Occupancy_Rate": 0.24855280117786493,
+        "Total_Staff": 0.0008105602742416475,
+        "Staff_to_Patient_Ratio": 0.001181723789548104,
+        "Department_Internal Medicine": 7.109047056850671e-05,
+        "Department_Outpatient": 0.00011950972045457387,
+        "Department_Pediatrics": 0.0,
+        "Department_Surgery": 6.971400359850142e-05,
+        "Patient_Type_Routine": 0.00017528092333337502,
+        "Patient_Type_Urgent": 0.0
+    },
+    "sorted_feature_importances": [
+        {
+            "feature": "Queue_Length",
+            "importance": 0.6782248434635263
+        },
+        {
+            "feature": "Bed_Occupancy_Rate",
+            "importance": 0.24855280117786493
+        },
+        {
+            "feature": "Available_Doctors",
+            "importance": 0.06525784534700424
+        },
+        {
+            "feature": "Patient_Arrivals",
+            "importance": 0.0023204946132989305
+        },
+        {
+            "feature": "Staff_to_Patient_Ratio",
+            "importance": 0.001181723789548104
+        },
+        {
+            "feature": "Occupied_Beds",
+            "importance": 0.0009580996449699095
+        },
+        {
+            "feature": "Total_Staff",
+            "importance": 0.0008105602742416475
+        },
+        {
+            "feature": "Discharge_Count",
+            "importance": 0.0005839485158414164
+        },
+        {
+            "feature": "Month",
+            "importance": 0.0005369106473265347
+        },
+        {
+            "feature": "Available_Nurses",
+            "importance": 0.0004275283256123971
+        },
+        {
+            "feature": "Emergency_Cases",
+            "importance": 0.0003343962584718668
+        },
+        {
+            "feature": "DayOfWeek",
+            "importance": 0.00020484081554242902
+        },
+        {
+            "feature": "Patient_Type_Routine",
+            "importance": 0.00017528092333337502
+        },
+        {
+            "feature": "Hour",
+            "importance": 0.00017041200879633684
+        },
+        {
+            "feature": "Department_Outpatient",
+            "importance": 0.00011950972045457387
+        },
+        {
+            "feature": "Department_Internal Medicine",
+            "importance": 7.109047056850671e-05
+        },
+        {
+            "feature": "Department_Surgery",
+            "importance": 6.971400359850142e-05
+        },
+        {
+            "feature": "Hospital_Capacity",
+            "importance": 0.0
+        },
+        {
+            "feature": "Department_Pediatrics",
+            "importance": 0.0
+        },
+        {
+            "feature": "Patient_Type_Urgent",
+            "importance": 0.0
+        }
+    ],
+    "training_records": 40000,
+    "testing_records": 10000,
+    "total_records": 50000,
+    "engineered_features_count": 20
+}

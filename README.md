@@ -1,180 +1,71 @@
-# Hospital Crowding Prediction
+# Hospital Crowding Prediction System
 
-A Machine Learning project for predicting hospital crowding levels based on hospital capacity, patient arrivals, staff availability, queue length, and other operational features.
+An end-to-end Machine Learning web application that predicts hospital crowding levels (Low, Medium, High) using a Decision Tree Classifier and an interactive healthcare dashboard.
+
+The trained model achieves **99.17% test accuracy** and is integrated with a Flask REST API for real predictions.
 
 ## Project Overview
 
-Hospital overcrowding can negatively affect patient experience, waiting times, and the efficiency of healthcare services.
+The system predicts hospital crowding based on operational factors such as:
 
-This project aims to predict the hospital's **Crowding Level** using historical hospital operational data and machine learning classification models.
+- Patient Arrivals
+- Emergency Cases
+- Queue Length
+- Discharge Count
+- Hospital Capacity
+- Occupied Beds
+- Available Doctors
+- Available Nurses
+- Department
+- Patient Type
+- Hour of Day
 
-The target variable contains three classes:
+The project goes beyond model training by integrating the ML model into a functional web dashboard.
 
-* **Low**
-* **Medium**
-* **High**
+## Key Features
 
-## Dataset
+- Real Machine Learning predictions
+- Decision Tree Classifier with 99.17% test accuracy
+- Flask REST API
+- Interactive responsive dashboard
+- Dynamic KPI metrics
+- Bed occupancy visualization
+- Staffing analysis
+- Feature importance visualization
+- Recent prediction history
+- Input validation and API error handling
 
-The project uses a dataset named `Hospital.csv`.
+## Machine Learning
 
-The dataset contains information related to hospital operations, including:
+**Algorithm:** Decision Tree Classifier
 
-* Hospital capacity
-* Occupied beds
-* Patient arrivals
-* Available doctors
-* Available nurses
-* Queue length
-* Department
-* Patient type
-* Date
-* Crowding level
+**Test Accuracy:** 99.17%
 
-## Data Preprocessing
+**Target Classes:**
 
-The following preprocessing steps were performed:
+- Low
+- Medium
+- High
 
-1. Removed the `Patient_ID` column.
-2. Converted the `Date` column to datetime.
-3. Extracted:
+### Top Feature Importances
 
-   * Month
-   * Day of Week
-4. Removed the original `Date` column.
-5. Created additional operational features.
-6. Applied One-Hot Encoding to categorical variables.
-7. Converted the target variable into numerical classes:
+| Feature | Importance |
+|---|---:|
+| Queue Length | 67.82% |
+| Bed Occupancy Rate | 24.86% |
+| Available Doctors | 6.53% |
+| Patient Arrivals | 0.23% |
 
-   * Low → 0
-   * Medium → 1
-   * High → 2
-
-## Feature Engineering
-
-Several features were created to better represent hospital workload and capacity.
-
-### Bed Occupancy Rate
-
-```text
-Occupied Beds / Hospital Capacity
-```
-
-This represents the percentage of hospital beds currently occupied.
-
-### Total Staff
+## System Architecture
 
 ```text
-Available Doctors + Available Nurses
-```
-
-This combines the available medical workforce into one feature.
-
-### Staff-to-Patient Ratio
-
-```text
-Total Staff / Patient Arrivals
-```
-
-This provides an indication of available staff relative to the number of arriving patients.
-
-## Machine Learning Models
-
-Four classification algorithms were evaluated:
-
-* Logistic Regression
-* Decision Tree
-* Random Forest
-* Gradient Boosting
-
-The data was divided into training and testing sets using an 80/20 split with stratification.
-
-Standardization was applied to the Logistic Regression model.
-
-## Model Evaluation
-
-The models were evaluated using:
-
-* Accuracy
-* Weighted F1-Score
-* Classification Report
-* Confusion Matrix
-* 5-Fold Cross Validation
-
-Feature importance was also analyzed for the selected Decision Tree model.
-
-## Best Model
-
-The Decision Tree Classifier was selected as the best-performing model based on the evaluation performed in the notebook.
-
-> **Note:** Model performance numbers should be updated after running the notebook with the current dataset.
-
-## Business Insights
-
-The model can potentially help hospitals:
-
-* Monitor crowding levels.
-* Identify periods of high congestion.
-* Improve patient routing.
-* Support hospital capacity planning.
-* Better allocate available medical staff.
-* Monitor operational indicators such as queue length and bed occupancy.
-
-## Project Structure
-
-```text
-Hospital-Crowding-Prediction/
-│
-├── Hospital.csv
-├── Hospital1.ipynb
-├── hospital_crowding_model.pkl
-├── scaler.pkl
-└── README.md
-```
-
-## How to Run
-
-### 1. Clone the repository
-
-```bash
-git clone <YOUR_REPOSITORY_URL>
-cd <YOUR_REPOSITORY_NAME>
-```
-
-### 2. Install the required libraries
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn joblib jupyter
-```
-
-### 3. Open the notebook
-
-```bash
-jupyter notebook Hospital1.ipynb
-```
-
-### 4. Run the notebook cells
-
-Make sure `Hospital.csv` is located in the same directory as the notebook.
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Joblib
-* Jupyter Notebook
-
-## Future Improvements
-
-Possible improvements include:
-
-* Hyperparameter tuning.
-* Testing additional classification algorithms.
-* Handling class imbalance if present.
-* Creating a real-time prediction interface.
-* Deploying the model using Streamlit or Flask.
-* Adding automated data validation and preprocessing pipelines.
+Frontend Dashboard
+HTML + CSS + JavaScript
+        ↓
+Flask REST API
+        ↓
+Decision Tree Model
+        ↓
+Real Prediction
+        ↓
+Dashboard Result

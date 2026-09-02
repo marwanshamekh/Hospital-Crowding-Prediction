@@ -93,12 +93,6 @@ Dashboard Result
 
 ---
 
-## 📸 Dashboard
-
-![Hospital Crowding Dashboard](frontend/assets/dashboard.png)
-
----
-
 ## ⚙️ How to Run
 
 ### 1. Clone the repository

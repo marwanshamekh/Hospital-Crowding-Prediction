@@ -1,6 +1,6 @@
 # Hospital Crowding Prediction System
 
-An end-to-end **Machine Learning web application** that predicts hospital crowding levels (**Low, Medium, High**) using a Decision Tree Classifier and an interactive healthcare dashboard.
+An end to end **Machine Learning web application** that predicts hospital crowding levels (**Low, Medium, High**) using a Decision Tree Classifier and an interactive healthcare dashboard.
 
 The trained model achieves **99.17% test accuracy** and is integrated with a **Flask REST API** for real predictions.
 
